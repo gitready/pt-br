@@ -1,7 +1,7 @@
 ---
 layout: post
 title: gráfico baseado em texto
-category: intermediário
+category: intermediario
 ---
 
 Somente uma breve e interessante dica hoje sobre @git log --graph@. Se você esta confuso sobre onde branches estão ligados ou como merges foram trabalhados, e se você é muito preguiçoso para @gitk@, @gitx@, ou o "GitHub Network Graph":http://github.com/qrush/jekyll/network, você pode obter uma rápida e simples representação gráfica dos seus commits com este comando.
