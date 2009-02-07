@@ -18,20 +18,20 @@
 		</div>
 		<div class="grid_4 suffix_2 info">
 			<div class="extra">daily tips for the noob to the guru</div>
-			<div class="author">by Nick Quaranto</div>
+			<div class="author">by Nick Quaranto, translated by Tailor R. Fontela</div>
 		</div>
     <div class="grid_8 prefix_2 suffix_2 main">
       {{ content }}
     </div> 
     <div class="grid_2 prefix_2 links">
-      <h3 id="green">beginner</h3>
-      {% for post in site.categories.beginner %}
+      <h3 id="green">iniciante</h3>
+      {% for post in site.categories.iniciante %}
         <a href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </div>
     <div class="grid_2 links">
-      <h3 id="yellow">intermediate</h3>
-      {% for post in site.categories.intermediate %}
+      <h3 id="yellow">intermediário</h3>
+      {% for post in site.categories.intermediario %}
         <a href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </div>
