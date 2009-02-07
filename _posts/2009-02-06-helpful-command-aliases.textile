@@ -1,7 +1,7 @@
 ---
 layout: post
 title: atalhos para comandos úteis
-category: intermediate
+category: intermediario
 ---
 
 Uma excelenta maneira para tornar sua vida mais fácil utilizando Git é adicionando alguns atalhos para os comandos que você usa o tempo inteiro no seu arquivo @.gitconfig@. Isto pode não ser a forma mais elegante para adicionar atalhos ao seu shell, mas pelo menos irá funcionar consistentemente em todos os shells e é uma moleza de se configurar. O "Git Cheat Sheet":http://cheat.errtheblog.com/s/git sugere adicionar um bloco no seu arquivo de configuração:
