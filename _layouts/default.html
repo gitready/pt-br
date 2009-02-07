@@ -17,8 +17,8 @@
 			<h1><a href="/">git ready</a></h1>
 		</div>
 		<div class="grid_4 suffix_2 info">
-			<div class="extra">daily tips for the noob to the guru</div>
-			<div class="author">by Nick Quaranto, translated by Tailor R. Fontela</div>
+			<div class="extra">dicas diárias para o noob ao guru</div>
+			<div class="author">por Nick Quaranto, traduzido por Tailor R. Fontela</div>
 		</div>
     <div class="grid_8 prefix_2 suffix_2 main">
       {{ content }}
@@ -36,13 +36,13 @@
       {% endfor %}
     </div>
     <div class="grid_2 links">
-      <h3 id="red">advanced</h3>
-      {% for post in site.categories.advanced %}
+      <h3 id="red">avançado</h3>
+      {% for post in site.categories.avancado %}
         <a href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </div>
     <div class="grid_2 suffix_2 links">
-      <h3 id="blue">resources</h3>
+      <h3 id="blue">recursos</h3>
       <a href="http://book.git-scm.com">Git Community Book</a>
       <a href="http://github.com/guides">GitHub Guides</a>
       <a href="http://git.or.cz/gitwiki">GitWiki</a>
@@ -56,9 +56,9 @@
     </div>
     <div class="grid_12 footer">    
 			<div class="footer_links">
-				<a href="/about.html">about</a>
-				<a href="http://github.com/qrush/gitready">code</a>
-				<a href="/submit.html">submit a tip</a>
+				<a href="/about.html">sobre</a>
+				<a href="http://github.com/qrush/gitready">fontes</a>
+				<a href="/submit.html">envie uma dica</a>
 				<a class="rss" href="http://feeds.feedburner.com/git-ready">rss</a>
 				<a href="http://twitter.com/gitready">twitter</a>
 			</div>
