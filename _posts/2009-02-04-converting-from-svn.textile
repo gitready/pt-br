@@ -1,37 +1,38 @@
 ---
 layout: post
-title: converting from svn
-category: beginner
+title: conversão do svn
+category: iniciante
 ---
 
-You're probably reading this for one of a few reasons:
+Você provavelmente esta lendo isto por uma das seguintes razões:
 
-* You're a longtime SVN user and want to see what Git is all about
-* You want to know how much of a pain switching to Git is
-* You hate SVN and want to see what's better
+* Você já utiliza a um logo tempo SVN e quer ver se GIT é tudo isso mesmo 
+* Você quer saber qual será o tamanho da dor para mudar para GIT
+* Você odeia SVN e busca encontrar algo melhor
 
-Instead of contributing to the mass of tutorials already written about the subject, I figured I would take the <s>easy</s> useful way out and compose a list of great tutorials on how to accomplish a migration to Git for those who are familiar with SVN. If you have more links, please comment away and I'll add them in.
+Em vez e contribuir para a massa de tutoriais já escritos sobre o assunto, pensei que seria mais <s>fácil</s> e também uma maneira mais útil compor uma lista dos grandes tutoriais que tratam sobre como realizar uma migração para o GIT para aqueles que já são mais acostumados com SVN. Se você tiver mais links, por favor comente que irei adiciona-lo a lista.
 
-*Transition Tutorials*
-_These tutorials describe just how different the two version control systems are and go over how they work on a (mostly) high level._
+
+*Tutoriais de Transição*
+_Estes tutoriais descrevem quais as diferenças entre os sistemas de controle de versão e sobre a forma como eles trabalham (boa parte) em alto nível._
 
 * "Git SVN Workflow":http://andy.delcambre.com/2008/03/04/git-svn-workflow.html
 * "GitSvnComparsion":http://git.or.cz/gitwiki/GitSvnComparsion
-* "An introduction to git-svn for Subversion/SVK users and deserters":http://utsl.gen.nz/talks/git-svn/intro.html
+* "Uma introdução ao git-svn para usuários Subversion/SVK e desertores":http://utsl.gen.nz/talks/git-svn/intro.html
 
-*Command Tutorials*
-_These tutorials focus on learning commands that perform common actions between the two systems._
+*Tutoriais de Comandos*
+_Estes tutoriais focam no aprendizado de comandos que executam ações comuns entre os dois sistemas._
 
 * "Git - SVN Crash Course":http://git.or.cz/course/svn.html
-* "Howto use Git and svn together":http://flavio.castelli.name/howto_use_git_with_svn
-* "git[-svn] in 30 minutes":http://michael-prokop.at/blog/2007/12/03/git-svn-in-30-minutes/
+* "Como utilizar Git e SVN juntos":http://flavio.castelli.name/howto_use_git_with_svn
+* "git[-svn] em 30 minutos":http://michael-prokop.at/blog/2007/12/03/git-svn-in-30-minutes/
 
-*Migration Tutorials*
-_These tutorials elaborate on how you can import your history from SVN and how to work with others who may not be converted yet._
+*Tutoriais de Migração*
+_Estes tutoriais ajudam a elaborar uma forma de você importar seu histórico do SVN e como trabalhar com outras pessoas que não podem realizar a conversão ainda._
 
-* "Converting Subversion repositories to Git":http://weblog.redlinesoftware.com/2008/2/24/converting-subversion-repositories-to-git
-* "Converting a Shared Subversion Repository to Git":http://notahat.com/posts/25
-* "How to convert from Subversion to Git":http://pauldowman.com/2008/07/26/how-to-convert-from-subversion-to-git/
+* "Convertendo repositórios Subversion para Git":http://weblog.redlinesoftware.com/2008/2/24/converting-subversion-repositories-to-git
+* "Convertendo um repositório Subversion compartilhado para Git":http://notahat.com/posts/25
+* "Como converter de Subversion para Git":http://pauldowman.com/2008/07/26/how-to-convert-from-subversion-to-git/
 * "git-svn is a gateway drug":http://www.robbyonrails.com/articles/2008/04/10/git-svn-is-a-gateway-drug
 
-Tips related to git-svn are still more than welcome, be it configuration options, bugs/issues you ran into, etc. "Submit away":/submit.html if you have great ideas!
+Dicas relacionadas a git-svn são ainda muito bem bem-vindas,  seja sobre configuração de opções, bugs/problemas decorrentes, etc. "Envie sempre":/submit.html que você tiver uma boa idéia!

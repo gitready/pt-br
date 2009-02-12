@@ -1,24 +1,24 @@
 ---
 layout: post
-title: bash auto completion
-category: advanced
+title: auto completar no bash
+category: avancado
 ---
 
-This tip comes from the ever resourceful "Brian Cardarella":http://cardarella.blogspot.com/, who has a gist on "how to install and set up	auto completion":http://gist.github.com/58383 with Git. It's based off of "Shawn O. Pierce's":http://spearce.org bash completion script. Just what will it do for you? 
+Esta dica partiu do sempre engenhoso "Brian Cardarella":http://cardarella.blogspot.com/, que tem no gist um "como instalar e definir o auto completar":http://gist.github.com/58383 com Git. Que foi baseado no script de completar o bash do "Shawn O. Pierce's":http://spearce.org. Então, o que isto irá por você?
 
 <blockquote>
-The contained completion routines provide support for completing:
-* local and remote branch names
-* local and remote tag names
-* .git/remotes file names
-* git 'subcommands'
-* tree paths within 'ref:path/to/file' expressions
-* common --long-options
+As rotinas incluidas provem suporte para complementar:
+
+* nomes de branches locais e remotos
+* nomes de tags locais e remotas
+* nomes dos arquivos .git/remotes 
+* git 'subcomandos'
+* árvore contendo os locais da expressão 'ref:path/to/file'
+* muitas --diversas-opções
 </blockquote>
 
+A instalação é bastante facíl: puxe os arquivos via download/wget/curl e então coloque no seu diretório home e edite seu @.bash_profile@ com suas definições. "Eric Goodwin":http://blog.ericgoodwin.com/ também descreve muito bem "como baixar o script e instalá-lo":http://blog.ericgoodwin.com/2008/4/10/auto-completion-with-git caso você não tenha compilado o git a partir do código-fonte. Ele também disponibilizou um "fantástico artigo":http://blog.infinitered.com/entries/show/4 sobre iniciar diversos arquivos no bash se isso tudo é novo para você.
 
-Installation is really easy: just download/wget/curl the files and put them in your home directory, edit your @.bash_profile@ and you're set. "Eric Goodwin":http://blog.ericgoodwin.com/ also has a great writeup of "how to pull the script down and install it":http://blog.ericgoodwin.com/2008/4/10/auto-completion-with-git if you haven't compiled git from source. He also has found a "fantastic article":http://blog.infinitered.com/entries/show/4 on bash's various startup files if this is all new to you.
+Para os usuários OSX, vocês também podem utilizar MacPorts para instalar o script. "Pratik Naik":http://m.onkey.org/2008/4/12/if-you-see-this tem uma maneira bem fácil de instala-lo caso você já tenha usado a opção @+bash_completion@. Se não, provavelmente será  mais fácil somente desativar a sua versão atual e reinstalar já com as opções adicionadas. 
 
-For OSX users, you can also use MacPorts to install the script. "Pratik Naik":http://m.onkey.org/2008/4/12/if-you-see-this has a really easy way of installing it if you used the @+bash_completion@ option. If not, it's probably easier to just deactivate your current version and reinstall it with that option added. 
-
-If you know how to accompish this in other shells, comment away or "submit a tip!":/submit.html
+Se você sabe como executar isso em outros shells, comente sempre ou "envie uma dica!":/submit.html
