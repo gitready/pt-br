@@ -4,7 +4,7 @@ title: atalhos para comandos úteis
 category: intermediario
 ---
 
-Uma excelenta maneira para tornar sua vida mais fácil utilizando Git é adicionando alguns atalhos para os comandos que você usa o tempo inteiro no seu arquivo @.gitconfig@. Isto pode não ser a forma mais elegante para adicionar atalhos ao seu shell, mas pelo menos irá funcionar consistentemente em todos os shells e é uma moleza de se configurar. O "Git Cheat Sheet":http://cheat.errtheblog.com/s/git sugere adicionar um bloco no seu arquivo de configuração:
+Uma excelente maneira para tornar sua vida mais fácil utilizando Git é adicionando alguns atalhos para os comandos que você usa o tempo inteiro no seu arquivo @.gitconfig@. Isto pode não ser a forma mais elegante para adicionar atalhos ao seu shell, mas pelo menos irá funcionar consistentemente em todos os shells e é uma moleza de se configurar. O "Git Cheat Sheet":http://cheat.errtheblog.com/s/git sugere adicionar um bloco no seu arquivo de configuração:
 
 
 <pre>
@@ -30,7 +30,7 @@ $ git st
 nothing added to commit but untracked files present (use "git add" to track)
 </pre>
 
-Você também pode adicionar mais alguns atalhos como demostrado a seguir, que estará adcionado automaticamente no seu arquivo @.gitconfig@. 
+Você também pode adicionar mais alguns atalhos como demostrado a seguir, que já estará adcionado automaticamente no seu arquivo @.gitconfig@. 
 
 <pre>
 $ git config –-global alias.rb rebase
