@@ -1,29 +1,29 @@
 ---
 layout: post
-title: fixing broken commit messages
-category: advanced
-published: false
+title: corrigindo mensagem quebrada de commit
+category: avancado
 ---
 
-You just committed that awesome feature/test/bug, but something just isn't right. Either some information isn't filled out, the commit message is wrong, or something else is just messed up. Let's go over what can be done to fix the associated data after the fact.
+Você quer comitar aquela excelente feature/test/bug, porém alguma coisa não esta certa. Uma ou outra informação não esta preenchida, a mensagem do commit esta errada, ou alguma outra coisa esta confusa. Vamos então ao que pode ser feito para corrigir de fato as informações associadas.
 
-Fixing the previous commit is very simple. Just use
+Corrigir o commit anterior é muito simples. Basta usar
 
 @git commit --amend@
 
-And that will fire up the commit patch in $EDITOR for you to mess with. Simply edit the message right on the top line of the file, save, quit and you're done. 
+E isto irá disparar o commit no path $EDITOR para você brincar um pouco.
+Simplesmente edite com a mensagem certa na linha superior do arquivo, salve, feche e está feito.
 
-Now let's say you've got a few commits to fix, or the commit that is broken is a few commits back. This process is a little more complex, but isn't too bad. (Thanks to "Evan Phoenix":http://blog.fallingsnow.net/ for this one.)
+Agora vamos conversar sobre como voltar alguns commits para conserta-los, ou o commit que esta quebrado a alguns commits atrás. Este processo é um pouco mais complexo, mas não é tão difícil. (Agradeço ao "Evan Phoenix":http://blog.fallingsnow.net/ por mais esta.)
 
-Here's the scenario: the last 3 commits don't have the right username, email, or perhaps commit message. Let's start by generating patch files for the commits:
+Eis o cenário: os 3 últimos commit não tiveram um username correto, email, ou talvez mensagem no commit. Vamos iniciar pela geração do patch dos arquivos para os commits:
 
 @git format-patch HEAD^^^@
 
-That will generate files in the form of 0001-commit-message that contains the commit diff and metadata. One note with the 3 caret symbols: just add one for each commit you need to go back, and be consistent! *EDIT:* You can also refer to past commits with the syntax HEAD~n, so for this example we'd use HEAD~3. Go ahead and edit these files so they have the proper information. Once that's done, we'll need to reset our repository back a few commits:
+Isto irá gerar arquivos no formato de 0001-commit-message contendo a diferença entre commit e metadados. Uma nota sobre o terceiro símbolo: apenas adicione um para cada commit que você quiser voltar, e seja coerente! *EDITADO:* Você pode fazer referência a commits passados com a sintaxe  HEAD~n, como neste exemplo que usamos HEAD~3. Siga em frente e edite estes arquivos com as informações apropriadas. Feito isso, iremos resetar nosso repositório voltando atrás alguns commits:
 
 @git reset --hard HEAD^^^@
 
-Now we can apply each commit to fix the information. Make sure you do it in the right order! (Usually it's ascending)
+Agora podemos aplicar a correção das informações de cada commit. Certifique-se de fazer isto na ordem certa! (Usualmente na ascendente)
 
 <pre>
 git am < 0001...
@@ -31,14 +31,14 @@ git am < 0002...
 git am < 0003...
 </pre>
 
-Now if you check @git log@ you should see the right information. If for some reason stuff got messed up, doing a 
+Agora se você verificar em @git log@ você poderá visualizar as informações corretas. Se por alguma razão as coisas estiverem bagunçadas, faça um 
 
 @git reset --hard origin/master@
 
-will bring you back to your original changes. Once you've got the information fixed, you'll need to do a force push on the repo:
+que irá trazer de volta as suas alterações originais. Uma vez que você tiver corrigido as informações, você precisará forçar um push no repositório:
 
 @git push -f@
 
-If you don't add the @-f@, git will complain. *WARNING!* Just be aware that modifying commit messages may muck up other's repositories and should be used with caution. In fact, other developers may flat out hate you for doing this. If it's far back enough it's probably a "bad idea to rewrite history anyway.":http://www.youtube.com/watch?v=BytKSy8M4bk
+Se você não adicionar o @-f@, o git irá reclamar. *AVISO!* Esteja ciente de que modificar mensagens dos commits pode estragar outros repositórios acima e devem ser usados com precaução. De fato, outros desenvolvedores talvez possam lhe odiar por causa disto. Se estiver longe o bastante para trás provavelmente será uma "péssima idéia reescrever o histórico de qualquer maneira.":http://www.youtube.com/watch?v=BytKSy8M4bk
 
-If you know of any unexpected or uncovered consequences please let us know in the comments. Another tip in the future will cover fixing the actual committed files and making sure that all repos are up to date.
+Se você souber de algum imprevisto ou se descobrir alguma consequência por favor nos informe nos comentários. Outras dicas no futuro irão cobrir a correção dos arquivos atuais commitados e como garantir que todos os repositórios estejam atualizados. 
