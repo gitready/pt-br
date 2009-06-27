@@ -1,36 +1,37 @@
 # Git Ready
 
-> There is only one way to *get ready* for immortality, and that is to love<br />
-> this life and live it as bravely and faithfully and cheerfully as we can.<br />
+> Há apenas um modo de *estar preparado* para a imortalidade, e esse modo é amar<br />
+> essa vida e viver corajosa, fiel e alegremente quanto pudermos. <br />
 > ~ Henry Van Dyke
 
-## About
+## Sobre
 
-This repository hosts the HTML, CSS, images, and posts for [gitready.com](http://gitready.com)<br />
-Git Ready publishes daily tips for those who want to learn more about the VCS or just get started.
+Esse repositório armazena HTML, CSS, imagens e os post do [gitready.com](http://gitready.com)<br />
+O Git Ready publica diariamente dicas para aqueles que querem aprender mais sobre o controle de versão ou apenas começar.
 
-## Publishing
+## Publicando
 
-This blog is generated with the [Jekyll](http://github.com/mojombo/jekyll) engine, [forked here](http://github.com/qrush/jekyll) with some special modifications.<br />
-Simple and easy formatting that sticks to the basics. All static HTML too, so worrying about scalability is non-existent.
+Esse blog é gerado com o [Jekyll](http://github.com/mojombo/jekyll), [com um fork aqui](http://github.com/qrush/jekyll) com algumas modificações especiais.<br />
+Formatação simples e fácil de coisas básicas. Tudo em HTML estático tambem, portanto preocupação com escalabilidade não existe.
 
-## Contributing
 
-If you have ideas about new pages, layouts, or what have you, fork away!<br />
-If you want to submit tips, [please do so here](http://gitready.com/qrush/gitready).
+## Contribuindo
 
-## Translating
+Se você tiver ideias sobre novas páginas, layouts, ou o que você quiser, é só fazer um fork!<br /> 
+Se você quiser enviar dicas, [faça isso aqui](http://gitready.com/qrush/gitready).
 
-If you are interested in translating posts into another language, great! Here's what to do:
+## Traduzindo
 
-* Fork the project.
-* Create a branch with the ISO code for your language 
-* Translate as little or as many posts as you so desire.
-* The posts that aren't translated, add this to the YAML front matter (this way, untranslated posts don't show up):
+Se você estiver interessado em traduzir os posts para outra lingua, ótimo! Aí vai o que fazer:
+
+* Faça um fork do projeto
+* Crie um branch com o código ISO para a sua lingua
+* Traduza um ou quantos posts você quiser.
+      * Para os posts que ainda não foram traduzidos, adicione isso no início do arquivo como YAML (desse modo, os posts não traduzidos não serão mostrados):
 
     published: false
 
-* Submit a pull request to the main repository.
+* Mande um pull request para o repositório principal.
 
-Once that's done, I'll add your language's subdomain and get it published.
+Quando isso estiver pronto, eu vou adicionar o subdomínio da sua lingua e publicar.
 
