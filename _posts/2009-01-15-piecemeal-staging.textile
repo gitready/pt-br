@@ -1,15 +1,14 @@
 ---
 layout: post
-title: piecemeal staging
-category: advanced
-published: false
+title: adicionando trechos de código
+category: avancado
 ---
 
-This is a follow up to the comments from yesterday's article about "interactive adding":http://gitready.com/intermediate/2009/01/14/interactive-adding.html. Readers were begging coverage of powerful @git add -p@, a shortcut to the patch mode of interactive adding. This command is capable of breaking up changes in files into smaller hunks so you can commit *exactly* what you want, and not just the whole file. 
+Esse é um follow up dos comentários do artigo de ontem sobre "adicionar interativamente":http://pt-br.gitready.com/intermediario/2009/01/14/interactive-adding.html. Leitores que estão começando a conhecer o poder do @git add -p@, um atalho para o modo de patch da adição interativa. Esse comando é capaz de quebrar modificações de arquivo em trechos menores para que você possa fazer commit *exatamente* do que você quer, e não de todo o arquivo. 
 
-This behavior is very helpful since it allows you to version any "hunk" of text in the file that you'd like. Perhaps that one line of code will break the build on others' machines or the build server, but just not yours. You get the point.
+Esse comportamento é muito útil pois lhe permite versionar qualquer "trecho" de texto em um arquivo que você quiser. Talvez uma linha de código possa quebrar em outras máquinas ou no servidor, mas não na sua. Ou algo assim.
 
-Let's go through an example of using it, making changes to our project's trusty README file again. Here's what @git diff@ gives us from the changes that were just made:
+Agora vamos para um exemplo de uso, fazendo alterações para nosso arquivo README novamente. Aqui o que o @git diff@ nos retorna referente as modificações que foram feitas:
 
 <pre>
 diff --git a/README.md b/README.md
@@ -17,72 +16,72 @@ index 2556dae..45d8b6e 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,6 +1,14 @@
-> There is only one way...
+> Há apenas um modo...
 > ~ Henry Van Dyke
    
-+# Project information
++# Informações do projeto
 +
 +Blah blah blah...
 +
-# Want to contribute?
+# Gostaria de contribuir?
 
-If you have ideas about... 
+Se você tiver idéias sobre...
 +
-+# About
++# Sobre
 +
-+This blog is just awesome.
++Esse blog é fantástico!
 </pre>
 
-So as we can see, we've made changes in separate parts of the file. However, I want to only commit the lower half. Besides, who really needs documentation anyway? Enter:
+Então, como pode ver, nós fizemos mofificações em partes separadas do arquivo. No entanto, eu quero fazer um commit da parte de baixo. Além disso, quem precisa de documentação? Digite:
 
 @git add -p@
 
-Run this and you'll be greeted with a prompt just like @git add -i@, but it has quite a few options:
+Rode isso e você receberá um prompt parecido com o do @git add -i@, mas com algumas outras opções:
 
 <pre>
 Stage this hunk [y/n/a/d/s/e/?]? ?
-y - stage this hunk
-n - do not stage this hunk
-[... removed a few ...]
-s - split the current hunk into smaller hunks
-e - manually edit the current hunk
-? - print help
+y - colocar esse trecho no stage
+n - não colocar esse trecho no stage
+[... removendo alguns ...]
+s - dividir o trecho atual em trechos menores
+e - editar esse trecho manualmente
+? - imprimir o help
 </pre>
 
-Most are pretty self-explanatory, but let"s go over the really cool ones. What we really want is the @s@ option, which will split the file into two smaller hunks of code, one for the higher "Project Information" block and one for the "About" block. Once it"s split it will prompt you with just the changes for that hunk:
+A maioria é auto-explicativa, mas vamos para a mais divertida. O que nós realmente queremos é a opção @s@, que irá dividir o arquivo em dois trechos de código menores, um com a parte para o bloco de cima "Informações do projeto" e outro para o bloco "Sobre". Uma vez que dividido ele irá mostrar para você apenas as mudanças para aquele trecho:
 
 <pre>
 Split into 2 hunks.
 @@ -1,6 +1,10 @@
-> There is only one way...
+> Há apenas um modo...
 > ~ Henry Van Dyke
 
-+# Project information
++# Informações do projeto
 +
 +Blah blah blah...
 +
-# Want to contribute?
+# Gostaria de contribuir?
 
-If you have ideas about...
+Se você tiver ideias sobre...
 Stage this hunk [y/n/a/d/j/J/e/?]? n
 </pre>
 
-From here we can ignore it with @n@, and move on to the next one and add it with @y@:
+A partir daque nós podemos ignorar isso com @n@, e ir para o próximo e adicionar com @Y@:
 
 <pre>
 @@ -4,3 +8,7 @@
-# Want to contribute?
+# Gostaria de contribuir?
 
-If you have ideas about...
+Se você tiver idéias sobre...
 +
-+# About
++# Sobre
 +
-+This blog is just awesome.
++Esse blog é fantástico!
 Stage this hunk [y/n/a/d/K/e/?]? y
 </pre>
 
-Doing a @git status@ will show changes to be committed and changes to be staged on one file. Strange, but it makes sense: we staged half the changes, and the other half are not yet added to the index. 
+Dando um @git status@ você verá as modificações prontas para o commit e as modificações que estão na área de stage no mesmo arquivo. Estranho, mas isso faz sentido: colocamos no stage metade das mudanças, e a outra metade ainda não foi adicionada.
 
-There's also the @e@ option, which will let you to manually flip the hunks on and off in your favorite editor. Instructions are included with that option, so go play around with it when you get the chance. (No pun intended.)
+Há tambem a opção @e@, que permite a você inverter manualmente as fatias de código no seu editor favorito. Instruções são incluídas com essa opção, então brinque com isso quando tiver a chance. (Sem trocadilhos.)
 
-If you've got any stories as to how @git add -p@ has helped you (or if a neat feature was missed), let us know in the comments! 
+Se você tiver qualquer história sobre como o @git add -p@ ajudou você (ou se alguma característica interessante foi deixada para trás), poste nos comentários!
