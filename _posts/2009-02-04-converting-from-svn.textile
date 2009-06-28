@@ -10,8 +10,7 @@ Você provavelmente esta lendo isto por uma das seguintes razões:
 * Você quer saber qual será o tamanho da dor para mudar para GIT
 * Você odeia SVN e busca encontrar algo melhor
 
-Em vez e contribuir para a massa de tutoriais já escritos sobre o assunto, pensei que seria mais <s>fácil</s> e também uma maneira mais útil compor uma lista dos grandes tutoriais que tratam sobre como realizar uma migração para o GIT para aqueles que já são mais acostumados com SVN. Se você tiver mais links, por favor comente que irei adiciona-lo a lista.
-
+Em vez e contribuir para a massa de tutoriais já escritos sobre o assunto, pensei que seria mais <s>fácil</s> e também uma maneira mais útil compor uma lista dos grandes tutoriais que tratam sobre como realizar uma migração para o GIT para aqueles que já são mais acostumados com SVN. Se você tiver mais links, por favor comente que irei adicioná-lo à lista.
 
 *Tutoriais de Transição*
 _Estes tutoriais descrevem quais as diferenças entre os sistemas de controle de versão e sobre a forma como eles trabalham (boa parte) em alto nível._
