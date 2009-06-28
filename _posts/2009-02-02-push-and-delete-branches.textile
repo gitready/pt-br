@@ -10,7 +10,7 @@ Então digamos que você acabou de fazer um "checkout num novo branch":http://gi
 
 @git push origem novafuncionalidade@
 
-Onde @origem@ é o nome do seu repositório remoto e @novafuncionalidade@ é o nome do branch do qual você quer fazer o push. Esta é de longe a maneira mis fácil, mas há outra forma se você quiser uma outra opção. "Geoff Lane":http://zorched.net criou um artigo chamado de "great tutorial (em inglês)":http://www.zorched.net/2008/04/14/start-a-new-branch-on-your-remote-git-repository/ que aborda como fazer push de uma ref para um repositório remoto, pegar as mudanças, e começar a acompanhar (ou fazer tracking) desse branch. 
+Onde @origem@ é o nome do seu repositório remoto e @novafuncionalidade@ é o nome do branch do qual você quer fazer o push. Esta é de longe a maneira mis fácil, mas há outra forma se você quiser uma outra opção. "Geoff Lane":http://zorched.net criou um artigo chamado de "great tutorial (em inglês)":http://www.zorched.net/2008/04/14/start-a-new-branch-on-your-remote-git-repository/ que aborda como fazer push de uma ref para um repositório remoto, pegar as mudanças e começar a acompanhar (ou fazer tracking) desse branch. 
 
 Excluir também é uma tarefa fácil (embora pareça uma "gambiarra"):
 
