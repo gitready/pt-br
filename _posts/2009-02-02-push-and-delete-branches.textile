@@ -2,10 +2,9 @@
 layout: post
 title: fazendo push e excluíndo branches remotos
 category: iniciante
-published: false
 ---
 
-Ela é uma tarefa que muitos usuários do Git têm que fazer frequentemente, mas muitos (incluido o auto) esqueceram ou simplesmente não sabem como fazer. Aqui está o guia definitivo se você esqueceu.
+Esta é uma tarefa que muitos usuários do Git têm que fazer frequentemente, mas muitos (incluindo o autor) esqueceram ou simplesmente não sabem como fazer. Aqui está o guia definitivo se você esqueceu.
 
 Então digamos que você acabou de fazer um "checkout num novo branch":http://gitready.com/beginner/2009/01/25/branching-and-merging.html, fez o commit de suas incríveis alterações, mas você tem que compartilhar este branch com outro desenvolvedor. Você pode fazer push do branch para um remoto de uma forma bem simples:
 
