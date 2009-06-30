@@ -85,3 +85,6 @@ Dando um @git status@ você verá as modificações prontas para o commit e as m
 Há tambem a opção @e@, que permite a você inverter manualmente as fatias de código no seu editor favorito. Instruções são incluídas com essa opção, então brinque com isso quando tiver a chance. (Sem trocadilhos.)
 
 Se você tiver qualquer história sobre como o @git add -p@ ajudou você (ou se alguma característica interessante foi deixada para trás), poste nos comentários!
+
+
+(Este artigo foi generozamente traduzido por "Willian Molinari":http://pothix.com/blog/)

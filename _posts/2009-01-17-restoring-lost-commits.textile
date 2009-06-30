@@ -1,7 +1,7 @@
 ---
 layout: post
-title: restoring lost commits
-category: advanced
+title: recuperando commits perdidos
+category: avancado
 published: false
 ---
 
