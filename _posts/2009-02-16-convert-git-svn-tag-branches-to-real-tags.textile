@@ -1,15 +1,16 @@
 ---
 layout: post
-title: convert git-svn tag branches to real tags
-category: advanced
-published: false
+title: convertendo git-svn tag branches para tags verdadeiras
+category: avancado
 ---
 
-This tip has been generously donated from "Alexis Midon":http://beardedmagnum.com. Thanks! His original post is "here":http://beardedmagnum.com/2009/02/15/converting-git-svn-tag-branches-to-real-tags/.
+Esta dica foi generosamente cedida por "Alexis Midon":http://beardedmagnum.com.
+Obrigado! O post original dele esta "aqui (em inglês)":http://beardedmagnum.com/2009/02/15/converting-git-svn-tag-branches-to-real-tags/.
 
-Alexis found out that in the process of converting from Subversion to Git, tags get a bit confused and show up as branches instead once converted over. This can be pretty inconvenient, especially when using @git branch@ since a ton of branches would show up such as @tag/1.2@, and so on. A little bit of scripting and Git magic can clear this up easily.
+Alexis descobriu que no processo de conversão de Subversion para Git, tags acabam ficando um pouco confusas e mostram-se como branches ao invés de serem convertidas. 
+Isto pode ser muito inconveniente, especialmente quando usamos @git branch@ que irá trazer uma tonelada de branches sendo que gostariamos de mostrar as tags com algo como @tag/1.2@, e assim por diante. Com um pouco de script e magia de Git podemos limpar isso facilmente.
 
-He followed the standard process for converting a svn repo:
+Ele seguiu o processo padrão para converter um repositório svn:
 
 <pre>
 $ mkdir rails
@@ -19,7 +20,7 @@ Initialized empty Git repository in .git/
 $ git svn fetch
 </pre>
 
-Next he whipped up a little script to convert all of the tag branches into "actual tags":http://gitready.com/beginner/2009/02/03/tagging.html, and then make sure they're deleted properly.
+Depois ele preparou um pequeno script para converter todas as 'tag branches' em "tags de verdade":http://gitready.com/beginner/2009/02/03/tagging.html, e em seguida verificar se foram todas devidamente excluidas.
 
 <pre>
 $ git-for-each-ref refs/remotes/origin/tags | cut -d / -f 5- |
@@ -31,4 +32,4 @@ git push origin tag "$ref"
 done
 </pre>
 
-If you've created scripts that help with converting over to Git from any other SCM, let us know in the comments or "submit your own tip!":http://gitready.com/submit.html
+Se você criou mais algum script que ajude na conversão de alguma outra SCM para Git, nos avise nos comentarios "ou submeta a sua própria dica":http://gitready.com/submit.html
