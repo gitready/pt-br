@@ -21,4 +21,4 @@ Este comando irá excluir o branch @novafuncionalidade@ no repositório remoto @
 Existe um script chamado "git-publish-branch":http://git-wt-commit.rubyforge.org/#git-publish-branch criado por "William Morgan":http://all-thing.net/ que automatiza de maneira simples este processo, caso você use frequentemente esse processo. Ele também faz com que excluir branches remotos pareça um pouco mais natural. Você conhece maneiras melhores ou mais fáceis de fazer estas tarefas acima? Conte prá nós nos comentários ou "mande sua própria dica!":http://gitready.com/submit.html
 
 
-(Este artigo foi generozamente traduzido por "Felipe Coury":http://felipecoury.com/)
+(Este artigo foi generosamente traduzido por "Felipe Coury":http://felipecoury.com/)
