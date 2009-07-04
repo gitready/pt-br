@@ -38,4 +38,4 @@ Sua opção final para ignorar diretórios é adicionando uma configuração por
 
 Leia o "manual":http://www.kernel.org/pub/software/scm/git/docs/gitignore.html se você quiser saber mais sobre como o ignore funciona. Como sempre, se você tiver outras sugestões relacionadas nos envie um comentário.
 
-(Este artigo foi generozamente traduzido por "Marcio Trindade":http://www.marciotrindade.com/)
+(Este artigo foi generosamente traduzido por "Marcio Trindade":http://www.marciotrindade.com/)
