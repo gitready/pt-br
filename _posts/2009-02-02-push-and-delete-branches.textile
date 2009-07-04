@@ -1,22 +1,24 @@
 ---
 layout: post
-title: push and delete remote branches
-category: beginner
-published: false
+title: fazendo push e excluíndo branches remotos
+category: iniciante
 ---
 
-This is an action that many Git users need to do frequently, but many (including the author) have forgotten how to do so or simply don't know how. Here's the definitive guide if you've forgotten.
+Esta é uma tarefa que muitos usuários do Git têm que fazer frequentemente, mas muitos (incluindo o autor) esqueceram ou simplesmente não sabem como fazer. Aqui está o guia definitivo se você esqueceu.
 
-So let's say you have "checked out a new branch":http://gitready.com/beginner/2009/01/25/branching-and-merging.html, committed some awesome changes, but now you need to share this branch though with another developer. You can push the branch up to a remote very simply:
+Então digamos que você acabou de fazer um "checkout num novo branch":http://gitready.com/beginner/2009/01/25/branching-and-merging.html, fez o commit de suas incríveis alterações, mas você tem que compartilhar este branch com outro desenvolvedor. Você pode fazer push do branch para um remoto de uma forma bem simples:
 
-@git push origin newfeature@
+@git push origem novafuncionalidade@
 
-Where @origin@ is your remote name and @newfeature@ is the name of the branch you want to push up. This is by far the easiest way, but there's another way if you want a different option. "Geoff Lane":http://zorched.net has created a "great tutorial":http://www.zorched.net/2008/04/14/start-a-new-branch-on-your-remote-git-repository/ which goes over how to push a ref to a remote repository, fetch any updates, and then start tracking the branch. 
+Onde @origem@ é o nome do seu repositório remoto e @novafuncionalidade@ é o nome do branch do qual você quer fazer o push. Esta é de longe a maneira mis fácil, mas há outra forma se você quiser uma outra opção. "Geoff Lane":http://zorched.net criou um artigo chamado de "great tutorial (em inglês)":http://www.zorched.net/2008/04/14/start-a-new-branch-on-your-remote-git-repository/ que aborda como fazer push de uma ref para um repositório remoto, pegar as mudanças e começar a acompanhar (ou fazer tracking) desse branch. 
 
-Deleting is also a pretty simple task (despite it feeling a bit kludgy):
+Excluir também é uma tarefa fácil (embora pareça uma "gambiarra"):
 
-@git push origin :newfeature@
+@git push origem :novafuncionalidade@
 
-That will delete the @newfeature@ branch on the @origin@ remote, but you'll still need to delete the branch locally with @git branch -d newfeature@. 
+Este comando irá excluir o branch @novafuncionalidade@ no repositório remoto @origem@, mas você ainda terá que excluir o branch local usando @git branch -d novafuncionalidade@. 
 
-There's a script called "git-publish-branch":http://git-wt-commit.rubyforge.org/#git-publish-branch created by "William Morgan":http://all-thing.net/ that can easily automate this process if you find yourself performing these actions frequently. It also makes deleting remote branches feel a bit more natural. Know of better or easier ways to do the above tasks? Let us know in the comments or "submit your own tip!":http://gitready.com/submit.html
+Existe um script chamado "git-publish-branch":http://git-wt-commit.rubyforge.org/#git-publish-branch criado por "William Morgan":http://all-thing.net/ que automatiza de maneira simples este processo, caso você use frequentemente esse processo. Ele também faz com que excluir branches remotos pareça um pouco mais natural. Você conhece maneiras melhores ou mais fáceis de fazer estas tarefas acima? Conte prá nós nos comentários ou "mande sua própria dica!":http://gitready.com/submit.html
+
+
+(Este artigo foi generozamente traduzido por "Felipe Coury":http://felipecoury.com/)
