@@ -110,8 +110,10 @@ p {
 
 .info .author {
 	color: #fff;
-	font-size: 11px;
+	font-size: 10px;
 	margin-top: 5px;
+  width: 320px;
+  text-align: left;
 }
 
 .content {
@@ -278,6 +280,6 @@ color: #aaa;
   margin-top: 2em;
 }
 
-  #related h2 {
-    margin-bottom: 1em;
-  }
+#related h2 {
+  margin-bottom: 1em;
+}
