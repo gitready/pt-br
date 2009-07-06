@@ -28,5 +28,4 @@ Se você quiser apenas exportar uma pasta ou um arquivo específico (nesse caso 
 
 Otimo! Você também pode encadear esse comando com o @find@ se você quiser exportar todos os arquivos header por exemplo. Veja tudo o que você pode fazer com "checkout-index na sua manpage.":http://www.kernel.org/pub/software/scm/git/docs/git-checkout-index.html "Daniel Schierbeck":http://github.com/dasch colocou esse processo em um pequeno script chamado "git-export":http://github.com/dasch/git-export/tree e vale a pena dar uma olhada se você precisar fazer isso.
 
-
 (Este artigo foi generozamente traduzido por "Willian Molinari":http://pothix.com/blog/)

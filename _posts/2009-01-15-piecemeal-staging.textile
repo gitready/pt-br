@@ -87,4 +87,4 @@ Há tambem a opção @e@, que permite a você inverter manualmente as fatias de 
 Se você tiver qualquer história sobre como o @git add -p@ ajudou você (ou se alguma característica interessante foi deixada para trás), poste nos comentários!
 
 
-(Este artigo foi generozamente traduzido por "Willian Molinari":http://pothix.com/blog/)
+(Este artigo foi generosamente traduzido por "Willian Molinari":http://pothix.com/blog/)
