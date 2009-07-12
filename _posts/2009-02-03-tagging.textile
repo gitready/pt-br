@@ -60,4 +60,4 @@ p=. !/images/tag.png!
 
 Outra nota, se você fez um push de tags que você quer mover ou renomear, o Git fará com que isso seja ridiculamente incômodo de ser feito. Confira na "manpage":http://www.kernel.org/pub/software/scm/git/docs/git-tag.html#_on_re_tagging para uma explicação de o porque de isso ser complicado e que deveria ser feito com cautela.
 
-Se você tem uma forma única de integrar tags no seu workflow com GIT, deixe-nos saber pelos comentário ou até "envie uma dica para que outros possam aprender!"":http://gitready.com/submit.html
+Se você tem uma forma única de integrar tags no seu workflow com GIT, deixe-nos saber pelos comentário ou até "envie uma dica para que outros possam aprender!":http://gitready.com/submit.html
