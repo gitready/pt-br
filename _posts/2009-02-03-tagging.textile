@@ -1,7 +1,7 @@
 ---
 layout: post
 title: tagging
-category: beginner
+category: iniciante
 ---
 
 Tagging no Git é uma ótima forma de indicar lançamentos de versões específicas de seu código, ou talvez se você precisa de uma forma para se referir exatamente a um commit em seu histórico por alguma razão. Este post vai mostrar o jeito certo (e errado) de usar @tag@ no git. 
