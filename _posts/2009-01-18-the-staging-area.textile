@@ -1,25 +1,24 @@
 ---
 layout: post
-title: the staging area
-category: beginner
-published: false
+title: A staging area
+category: iniciante
 ---
 
-One of the most essential concepts to Git is that of the staging area. Its use can fundamentally change how you work, for the better! Let's go over how exactly it works and what you'll need to know to use it.
+Um dos principais conceitos do GIT é a "staging area" (área temporária). Seu uso pode mudar radicalmente pra o melhor o modo como você trabalha! Vamos ver exatamente como ele funciona e o que você precisa saber para usá-lo.
 
-With most other version control systems, there's 2 places to store data: your working copy (the folders/files that you're currently using) and the datastore (where the version control decides how to pack and store your changes). In Git there's a third option: the staging area (or index). It's basically a loading dock where you get to determine what changes get shipped away.
+Com a maioria dos outros sistemas de controlo de versão, há 2 lugares para armazenar dados: no seu "working copy" (ambiente de trabalho) que são os arquivos e diretórios que você está usando atualmente e os datastore (banco de dados) que é onde o controle de versão decide a forma de empacotamento e guarde as suas alterações. No GIT há uma terceira opção: o staging. É basicamente um espaço temporário onde você determina quais mudanças serão adicionadas.
 
 p=. "!http://farm4.static.flickr.com/3259/2441544705_4c6f7e9b78.jpg!":http://flickr.com/photos/mundane_joy/2441544705/
 
-Since the working directory and what gets saved by Git are essentially decoupled, this allows the developer to build up their commits however they want, and not in a fashion where the VCS tells you. Since there's a layer between when Git actually saves the data, you gain a lot more flexibility and control.
+Uma vez que o working copy e o que é salvo pelo GIT ficam separados, isto permite aos desenvolvedores criarem quantos commits eles quiserem, e não do modo como o SCV(Sistema de Controle de Versão) nos diz. Uma vez que há esta camada no meio, quando o GIT realmente salva os dados, você ganha muito mais flexibilidade e controle.
 
-Using the index is quite simple with the @git add@ and @git commit@ commands. Basically, you @add@ files onto the index, and once you're satisfied with the changes @commit@ them:
+Utilizar o staging é muito simples com os comandos @git add@ e @git commit@. Basicamente, você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um @commit@:
 
 p=. "!http://whygitisbetterthanx.com/images/index1.png!":http://whygitisbetterthanx.com/#the-staging-area
 
-Once they're in the repository you can @push@ them to remote locations, @merge@ them into other branches, and much more. There's also actions that can be performed on the staging area itself, such as "temporarily stashing your changes":http://gitready.com/beginner/2009/01/10/stashing-your-changes.html. 
+Quando elas estão no repositório você pode @push@ (enpurrar) para locais remotos, @merge@ (fundir) em outros branches, e muito mais. Há também ações que podem ser realizadas na própria staging area, tais como "Esconder temporariamente suas mudanças":http://gitready.com/beginner/2009/01/10/stashing-your-changes.html.
 
-Let's go through just a basic example of using the staging area. I just made some changes:
+Vamos ver apenas um exemplo básico de como usar a staging area. Eu só fiz algumas mudanças:
 
 <pre>
 $ git status
@@ -37,7 +36,7 @@ $ git status
   no changes added to commit (use "git add" and/or "git commit -a")
 </pre>
 
-So in this example we have 2 files that Git knows about, and one it does not: help.txt. If we do @git add .@, that will add everything that has been changed or any new files that have not been tracked yet. The add command doesn't store the data yet, it simply places it on the loading dock, ready for the next @git commit@ truck to ship it away. 
+Neste exemplo, temos 2 arquivos que o GIT reconhece, e um que não: help.txt. Se fizermos @git add .@, irá adicionar tudo o que foi alterado ou qualquer arquivo novo que não está sendo monitorados ainda. O comando add não armazenará dados ainda, ele simplesmente coloca no staging (área temporária), onde estes ficam prontos para serem enviados no próximo @git commit@.
 
 <pre>
 $ git add .
@@ -51,7 +50,7 @@ $ git status
       new file:   help.txt
 </pre>
 
-Just like the prompt says, you can use @git reset HEAD <file>@ to restore files back to their modified state. This way, you can commit exactly what you wanted. "You can also commit specific lines of files if you really wanted.":http://gitready.com/advanced/2009/01/15/piecemeal-staging.html If you're wondering about how to revert files, "there's a whole tip dedicated to that as well.":http://gitready.com/beginner/2009/01/11/reverting-files.html From here, doing a @git commit@ will move all of the files into Git's data storage, and you're set!
+Como diz o aviso, você pode usar @git reset HEAD <file>@ para restaurar arquivos como antes das modificações. Dessa forma, você pode fazer um commit exatamente o que quiser. "Você também pode fazer commit de linhas específicas dos arquivos.":http://pt-br.gitready.com/avancado/2009/01/15/piecemeal-staging.html Se estiver se admirado sobre como reverter imagens, "Existe uma dica totalmente dedicada que é muito boa.":http://gitready.com/beginner/2009/01/11/reverting-files.html A partir daqui, faça um @git commit@ para mover todas as alterações o "banco de dados" do GIT, e pronto!
 
 <pre>
 $ git commit -m "Adding stuff"
@@ -60,9 +59,9 @@ $ git commit -m "Adding stuff"
    create mode 100644 help.txt
 </pre>
 
-If you're looking for more information on the index, check out these fantastic posts:
+Se você está procurando mais informações sobre o assunto, verifique estes fantásticos artigos:
 
 # "The Thing About Git":http://tomayko.com/writings/the-thing-about-git
 # "Git Book - The Git Index":http://book.git-scm.com/1_the_git_index.html
 
-If you know of other resources that explain the index, let us know in the comments!
+Se você souber de outros recursos que explicam o assunto, nos envie um comentário!
