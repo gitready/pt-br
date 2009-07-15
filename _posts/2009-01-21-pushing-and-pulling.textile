@@ -1,21 +1,20 @@
 ---
 layout: post
-title: pushing and pulling
-category: beginner
-published: false
+title: Empurrando e puxando
+category: iniciante
 ---
 
-Today we're going to review another basic yet powerful concept that Git among other version control systems of its type has: distribution! As you may know, your commits are all local, and repositories are simply clones of each other. That means the real work in distributing your projects is in synchronizing the changes via @git push@ and @git pull@. 
+Hoje vamos rever outro conceito básico porém poderoso que o GIT entre outros sistemas de controle de versão do seu tipo tem: distribuição! Como você deve saber, seus commits são todos locais, e repositórios são simplesmente clones uns dos outros. Isso significa que o trabalho real na distribuição de seus projetos está em sincronizar as mudanças através do  @git push@ e @git pull@.
 
-If you're new to Git, you may think that this is too much overhead and one that leads to a breakdown of control. Look at it this way: if your central server goes down, you're usually hosed and prevented from working and collaborating with others. Since all of the work involved with actually creating revisions is done on your own machine, you can code whether the network is down without the permission of others or being subject to network issues. Did I mention it's a lot faster too for most routine operations? Check out some more of advantages (and disadvantages) of DVCS at "Wikipedia":http://en.wikipedia.org/wiki/Distributed_revision_control#Vs_Centralised.
+Se você está começando com GIT, você pode pensar que isto é muito elevado e leva a uma falha de controle. Olhe para ele desta maneira: se o seu servidor central cair, você geralmente está na mão e impedido de trabalhar e colaborar com os outros. Uma vez que todos os envolvidos com o projeto tem uma revisão em sua própria máquina, você pode codificar se a rede cair, se não tiver autorização de outros ou quando esta sujeito a problemas de rede. Eu mencionei que é muito mais rápido para a maioria das operações comuns? Confira mais algumas das vantagens (e desvantagens) do DVCS na "Wikipédia":http://en.wikipedia.org/wiki/Distributed_revision_control # Vs_Centralised.
 
-"Oliver Steele":http://osteele.com has whipped up a great image of how pushing and pulling works:
+"Oliver Steele":http://osteele.com tem uma ótima imagem de como o pull e push funcionam:
 
 p=. !http://osteele.com/images/2008/git-transport.png!
 
-The topmost part of the diagram is easy, that's committing your changes to "the staging area":http://gitready.com/beginner/2009/01/18/the-staging-area.html. Once that's done, your version control is essentially in place, but now we want to synchronize it with our remote repository. This could be on a hosting site like "GitHub":http://github.com, your work's main git server, a production machine, or even another coworker's repository. Once the changes have been delivered, others can @pull@ them down and work with them. With most actions in Git there's a few options, but let's stick with @pull@ for today.
+A maior parte deste diagrama é fácil, faça um commit de suas alterações para "a staging area":http://pt-br.gitready.com/iniciante/2009/01/18/the-staging-area.html. Feito isso, seu sistema de controle está atualizado, mas agora nós precisamos sincronizar com o repositório remoto. Este pode ser um site como "GitHub":http://github.com, um servidor Git central, uma maquina de produção ou mesmo os repositórios dos colegas de trabalho. Uma vez que as alteração forem enviadas, outras pessoas podem puxar e trabalhar com elas. Como na maioria das ações no Git, existem algumas opções, mas vamos ficar com o @pull@ por hoje.
 
-Let's go through a real world example. I've just added the "Twitter":http://twitter.com/gitready link at the bottom of this blog. I want to @push@ my changes up to the project's "GitHub repository":http://github.com/qrush/gitready so I can update the server. The syntax of this command is usually @git push <remote> <branch>@. A remote is basically the address of a cloned repository. It's got pretty much all of the same data and history, it's just waiting to get updated. Usually most projects work with an @origin@ remote, and the @master@ branch by default.
+Vamos para um exemplo real. Eu acabei de adicionar o link do "Twitter":http://twitter.com/gitready no radapé deste blog. Eu preciso empurra minhas alterações para o "repositório do GitHub":http://github.com/qrush/gitready para que eu possa atualizar o servidor. a sintaxe para este comando normalmente é @git push <remote> <branch>@. Onde remote é um endereço de um repositório clonado que tem os mesmos dados e histórico e está apenas esperando para receber atualizações. Normalmente a maioria dos projetos trabalham com um remote @origin@ e o branch @master@ por padrão.
 
 <pre>
 $ git commit -am "Adding twitter link"
@@ -31,21 +30,21 @@ $ git push origin master
      361303d..f2cd831  master -> master
 </pre>
 
-Now our remote repository is updated, and if you visit GitHub "you'd be able to see the commits":http://github.com/qrush/gitready/commits/master. The output this command prints out has to deal with how Git transfers over the various blobs of data that have changed, and then lets us know that the repository has been updated by showing the changed SHA1. 
+Agora seu repositório remoto está atualizado e se você for no GitHub "você pode ver os commits":http://github.com/qrush/gitready/commits/master. A saída deste comando mostra como o GIT tem que lidar com a transferências dos vários blocos de dados que foram alterados e então nos informa que o repositório foi atualizado, mostrando a mudança de SHA1.
 
-But what about @pull@? We can use that to update any other repositories with the commits I just synchronized. The project's crappy deploy script does exactly that:
+Mas o que quer dizer @pull@? Nós podemos usar este comando para atualizar qualquer outro repositório com os commits que eu sincronizei. O projeto que tem um script de deploy ruim faz exatamente isso:
 
 <pre>
 $ git pull origin master
-  remote: Counting objects: 7, done.        
-  remote: Compressing objects: 100% (4/4), done.        
-  remote: Total 4 (delta 2), reused 0 (delta 0)        
+  remote: Counting objects: 7, done.
+  remote: Compressing objects: 100% (4/4), done.
+  remote: Total 4 (delta 2), reused 0 (delta 0)
   Updating 361303d..f2cd831
   Fast forward
    _layouts/default.html |    1 +
     1 files changed, 1 insertions(+), 0 deletions(-)
 </pre>
 
-The output shows us that the repository living on the server has some changes to bring in from remote repository, and it proceeds to bring them in. This process would be exactly the same if you wanted to bring in changes that another person committed to your repository. Those who have "forked the gitready repository":http://github.com/qrush/gitready/network/members on GitHub can also now get the changes I've made. Future tutorials will go over that process more in depth.
+O output nos mostra que o repositório no servidor teve algumas mudança em relação ao repositório remoto e então as traz. Este processo fará exatamente o mesmo para trazer alterações que outras pessoas enviarem para o seu repositório. Aqueles que tem um "fork do gitready":http://github.com/qrush/gitready/network/members no GitHub podem agora obter as alterações que eu fiz. Em artigos futuros irei falar deste processo mais a fundo.
 
-If you can think of any other ideas or concepts that were missed (we'll save refspecs for later tutorials), let us know.
+Se você tem outras idéias ou conceitos que não foram tratados nos informe (nós iremos manter a referência em artigos futuros).
