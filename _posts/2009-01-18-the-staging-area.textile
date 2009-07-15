@@ -16,7 +16,7 @@ Utilizar o staging é muito simples com os comandos @git add@ e @git commit@. Ba
 
 p=. "!http://whygitisbetterthanx.com/images/index1.png!":http://whygitisbetterthanx.com/#the-staging-area
 
-Quando elas estão no repositório você pode @push@ (enpurrar) para locais remotos, @merge@ (fundir) em outros branches, e muito mais. Há também ações que podem ser realizadas na própria staging area, tais como "Esconder temporariamente suas mudanças":http://gitready.com/beginner/2009/01/10/stashing-your-changes.html.
+Quando elas estão no repositório você pode @push@ (enpurrar) para locais remotos, @merge@ (fundir) em outros branches, e muito mais. Há também ações que podem ser realizadas na própria staging area, tais como "Juntando suas alterações":http://pt-br.gitready.com/iniciante/2009/01/10/stashing-your-changes.html.
 
 Vamos ver apenas um exemplo básico de como usar a staging area. Eu só fiz algumas mudanças:
 
@@ -50,7 +50,7 @@ $ git status
       new file:   help.txt
 </pre>
 
-Como diz o aviso, você pode usar @git reset HEAD <file>@ para restaurar arquivos como antes das modificações. Dessa forma, você pode fazer um commit exatamente o que quiser. "Você também pode fazer commit de linhas específicas dos arquivos.":http://pt-br.gitready.com/avancado/2009/01/15/piecemeal-staging.html Se estiver se admirado sobre como reverter imagens, "Existe uma dica totalmente dedicada que é muito boa.":http://gitready.com/beginner/2009/01/11/reverting-files.html A partir daqui, faça um @git commit@ para mover todas as alterações o "banco de dados" do GIT, e pronto!
+Como diz o aviso, você pode usar @git reset HEAD <file>@ para restaurar arquivos como antes das modificações. Dessa forma, você pode fazer um commit exatamente o que quiser. "Você também pode fazer commit de linhas específicas dos arquivos.":http://pt-br.gitready.com/avancado/2009/01/15/piecemeal-staging.html Se estiver se admirado sobre como reverter arquivos, "Existe uma dica totalmente dedicada que é muito boa.":http://pt-br.gitready.com/iniciante/2009/01/11/reverting-files.html A partir daqui, faça um @git commit@ para mover todas as alterações o "banco de dados" do GIT, e pronto!
 
 <pre>
 $ git commit -m "Adding stuff"
