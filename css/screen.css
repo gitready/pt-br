@@ -278,6 +278,14 @@ color: #aaa;
   margin-top: 2em;
 }
 
-#related h2 {
-  margin-bottom: 1em;
+  #related h2 {
+    margin-bottom: 1em;
+  }
+
+.survey {
+  font-size: 90%;
+  text-align: center;
+  padding: 5px;
+  background: #AED180;
+  margin-bottom: 20px;
 }
