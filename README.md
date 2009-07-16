@@ -1,8 +1,14 @@
+## Contribuindo com a tradução
+
+Para contribuir com a tradução, entre na [pagina do projeto no lighthouse](http://gitready-ptbr.lighthouseapp.com), crie uma conta, escolha um dos tickets em aberto e deixe um comentário, se possível com algum dado para contato.
+
+
 # Git Ready
 
 > Há apenas um modo de *estar preparado* para a imortalidade, e esse modo é amar<br />
 > essa vida e viver corajosa, fiel e alegremente quanto pudermos. <br />
 > ~ Henry Van Dyke
+
 
 ## Sobre
 

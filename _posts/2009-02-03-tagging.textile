@@ -54,7 +54,7 @@ $ git push --tags
    * [new tag]         v1.0.0 -> v1.0.0
 </pre>
 
-O segundo comando describe nos mostra que nós temos um commit após aonde a última tag foi feita. Este é um jeito fácil de descobrir quanto trabalho foi feito desde o último commit. Também, a opção @--tags@ foi usada para fazer o push, mas o push para a tag poderia ter sido feito com @git push origin : v1.0.0@. No GitHub (ou em seu remoto) você deveria ver a tag que foi feito o push:
+O segundo comando @describe@ nos mostra que nós temos um commit após aonde a última tag foi feita. Este é um jeito fácil de descobrir quanto trabalho foi feito desde o último commit. Também, a opção @--tags@ foi usada para fazer o push, mas o push para a tag poderia ter sido feito com @git push origin : v1.0.0@. No GitHub (ou em seu remoto) você deveria ver a tag que foi feito o push:
 
 p=. !/images/tag.png!
 
