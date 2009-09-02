@@ -6,7 +6,7 @@ task :deploy do
 
   regex = /refs\/heads\//
   branches = []
-  `git ls-remote origin`.split[2..-1].each do |l|
+  `git ls-remote qrush`.split[2..-1].each do |l|
     branches << l.gsub(regex, '') if l =~ regex
   end
 
@@ -22,7 +22,7 @@ git checkout #{branch}
 git pull origin #{branch}
 git checkout -f
 rm -rf _site
-jekyll --no-server --no-auto
+jekyll --no-auto
 mv _site ../_#{branch}
 mv ../#{branch} _old
 mv ../_#{branch} ../#{branch}
